@@ -2,7 +2,7 @@ import React from "react";
 import Login from "./screens/Login/Login"
 import "./App.css";
 import Account from "./components/Account/Account";
- import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
