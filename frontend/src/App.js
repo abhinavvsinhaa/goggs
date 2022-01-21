@@ -1,24 +1,21 @@
 import React from "react";
-import Login from "./screens/Login/Login"
 import "./App.css";
 import Account from "./components/Account/Account";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Contacts from "./Contacts/Contacts"
 
 function App() {
   return (
     <div className="App">
-      {/* <Login /> */}
-      {/* <Account 
-      img ="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-      name ="xyz"
-      email ="xyz.com"
-      mob ="jhh"
-      parentsMob="hjj"
-      course="2yr"
-      /> */}
-
       <Dashboard />
-      {/* <Login /> */}
+      <Account 
+        img ={Contacts[0].img}
+        name ={Contacts[0].name}
+        email ={Contacts[0].email}
+        mob ={Contacts[0].mob}
+        parentsMob={Contacts[0].parentsMob}
+        course={Contacts[0].course}
+      />
     </div>
   );
 }
