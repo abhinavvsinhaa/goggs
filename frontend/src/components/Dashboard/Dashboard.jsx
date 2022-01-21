@@ -1,6 +1,7 @@
 import React from "react";
 import "./Dashboard.css";
 
+
 // Mini variant drawer
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -164,6 +165,7 @@ export default function Dashboard() {
         </Drawer>
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <DrawerHeader />
+        
           <Typography paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
