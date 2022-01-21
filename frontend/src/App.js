@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Login from "./screens/Login/Login"
+import "./App.css";
+import Account from "./components/Account/Account";
+ import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Login /> */}
+      {/* <Account 
+      img ="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
+      name ="xyz"
+      email ="xyz.com"
+      mob ="jhh"
+      parentsMob="hjj"
+      course="2yr"
+      /> */}
+
+      <Dashboard />
+      {/* <Login /> */}
     </div>
   );
 }
