@@ -9,4 +9,3 @@ exports.userSchema = new mongoose.Schema({
         type: Object
     }
 });
-

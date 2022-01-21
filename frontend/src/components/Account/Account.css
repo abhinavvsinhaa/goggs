@@ -5,3 +5,54 @@
   flex-direction: column;
   align-items: center;
 }
+
+/* .account-container {
+  background-color: aqua;
+} */
+
+td {
+  border: 0 !important;
+}
+
+tr {
+  border: 0 !important;
+}
+
+.user-details {
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .account-container {
+    margin-left: 60px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imageRow {
+    width: 150px;
+  }
+
+  .image {
+    width: 150px;
+  }
+
+  table {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .account-container {
+    margin-left: 100px;
+    margin-right: 100px !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  table {
+    width: 50% !important;
+    height: 250px;
+  }
+}
