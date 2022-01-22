@@ -1,12 +1,11 @@
 -------BACKEND-------
-
-JWT Format
+JWT Format (done)
 JWT: {
   enroll: String
   type: hostel
 }
 
-For generator api routes
+For generator api routes (done)
 /hostel/JWT 
 /academic/JWT
 /mess/JWT
