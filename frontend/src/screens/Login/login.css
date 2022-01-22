@@ -12,11 +12,18 @@
   background-size: cover;
   height: 100vh;
 }
+.RadioBtn{
+  display: flex ;
+  align-items: flex-start !important;
+  flex-direction: row;
+  justify-content: space-evenly !important;
+}
 
 .loginAccount {
-  background-color: whitesmoke;
+  background-color: rgb(245, 245, 245);
   height: 100vh;
 }
+
 
 .login-box {
   display: flex;
@@ -27,9 +34,9 @@
   height: 100%;
 }
 
-h5{
-  font-weight: bold;
-  align-items: center;
+h4{
+  display: flex;
+  align-items: center !important;
 }
 
 form{

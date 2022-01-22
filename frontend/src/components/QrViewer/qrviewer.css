@@ -1,12 +1,6 @@
-.verified {
-    margin: 0 auto;
+.qr-view {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.imgRowNew {
-    display: flex;
-    flex-direction: row;
 }

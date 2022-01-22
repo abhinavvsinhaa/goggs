@@ -4,7 +4,7 @@ const app = require('./app');
 const mongoose = require('mongoose');
 
 //Connecting to the mongoose server!
-const uri = process.env.URI;
+const uri = process.env.DB_URI;
 
 mongoose.connect(uri, {
   useNewUrlParser: true,

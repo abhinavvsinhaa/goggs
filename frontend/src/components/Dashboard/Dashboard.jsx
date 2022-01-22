@@ -23,6 +23,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
+import QrCodeIcon from '@mui/icons-material/QrCode'
 
 const drawerWidth = 240;
 
@@ -98,13 +99,7 @@ const RenderIcon = (props) => {
       return <AccountCircleIcon />
     
     case 1:
-      return <ApartmentIcon />
-
-    case 2:
-      return <RestaurantIcon />
-     
-    case 3:
-      return <DirectionsBusIcon />
+      return <QrCodeIcon />
           
     default:
     break;
@@ -153,7 +148,7 @@ export default function Dashboard() {
           </DrawerHeader>
           <Divider />
           <List>
-            {['Account', 'Hostel', 'Mess', 'Bus'].map((text, index) => (
+            {['Account', 'QR Code'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>
                   <RenderIcon index={index}/>

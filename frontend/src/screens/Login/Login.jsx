@@ -10,8 +10,23 @@ const Login = () => {
                 <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 loginAccount">
                     <div className="login-box">
                         <h4> SIGN IN</h4>
-                        <br />
+                        
+                        <div className="RadioBtn">
+
+<div className="Student">
+<input type="radio" id="Student" name="AccountType" value="Student" />
+<label for="Student">Student</label>
+</div>
+
+<div className="Admin">
+<input type="radio" id="Admin" name="AccountType" value="Admin" />
+<label for="Admin">Admin</label><br /></div>
+</div>
+                        
                         <form>
+
+                       
+
                             <input type="text" placeholder="  Enrollment"/><br/>
                             <input type="password" placeholder="  Password" />
                             <br />
