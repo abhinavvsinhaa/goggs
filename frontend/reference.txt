@@ -23,3 +23,7 @@ Academic scan - Only check the user has a Academic JWT (verified)
 
 Admin Panel - Scanner only
 Student Panel - 3 options to generate which JWT and download option as well
+
+our project eliminates the need for usual paper back id card and helps us be contactless in these difficult times.
+With the help of just a qr card we will be now good to go.
+With the specialized mess qr we won't need to wait for the mess gate counter to work. With just a scan the total count will add in the total tally. 

@@ -1,18 +1,27 @@
 import React from "react";
 import "./Account.css"
 import {Contacts} from "../../Contacts/Contacts";
-import UserImage from "../../assets/user-image.png";
+import UserImage from "../../assets/userImage.jpg";
+import UserImage2 from "../../assets/user-image.png";
 import Dashboard from "../Dashboard/Dashboard"
 
 function Account(props){
     return (
         <div className="account-container"> 
             <table className="table table-bordered table-responsive">
-                <tr >
+                {/* <tr >
                     <td rowspan={5} style={{width: '200px'}} className="imageRow">
                         <img src={UserImage} alt="image" width='200px' className="image"/>
                     </td>
                     <td style={{backgroundColor: 'whitesmoke'}} className="user-details">Abhinav Sinha</td>
+                </tr> */}
+                <tr>
+                <td style={{width: '200px'}} className="imageRoww">
+                        <img src={UserImage} alt="image" width='200px' className="image"/>
+                    </td>
+                </tr>
+                <tr>
+                <td style={{backgroundColor: 'whitesmoke'}} className="user-detailss">Abhinav Sinha</td>
                 </tr>
                 <tr>
                     <td className="user-details">9920103085</td>

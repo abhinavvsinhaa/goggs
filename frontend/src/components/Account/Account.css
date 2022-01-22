@@ -16,6 +16,9 @@ td {
 
 tr {
   border: 0 !important;
+  height: 5vh;
+  font-weight: 550;
+  font-size: medium;
 }
 
 .user-details {
@@ -39,7 +42,11 @@ tr {
   }
 
   table {
-    height: 250px;
+    width: 70% !important;
+    height: 70vh;
+    text-align: center;
+    top: 6.5vh;
+    position: fixed;
   }
 }
 
@@ -52,7 +59,10 @@ tr {
   }
 
   table {
-    width: 50% !important;
-    height: 250px;
+    width: 30% !important;
+    height:70vh;
+    text-align: center;
+    top: 8vh;
+    position: fixed;
   }
 }

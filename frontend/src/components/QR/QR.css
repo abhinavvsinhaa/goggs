@@ -1,0 +1,128 @@
+.QrPage {
+  /* margin-left: 20vw; */
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+img {
+  height: 60vh;
+  width: auto;
+  position: relative;
+  top: 5.6vh;
+}
+
+.Button1 {
+  width: 30vh;
+  display: inline-block;
+  padding: 0.35vh 1.2vh;
+  border: 0.1em solid rgb(18, 58, 119);
+  background-color: rgb(18, 58, 119);
+  margin: 0 0.3em 1.3em 0;
+  border-radius: 0.42em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+}
+.Button1:hover {
+  border: 0.1em solid rgb(18, 58, 119);
+  color: rgb(18, 58, 119);
+  background-color: white;
+  text-align: center !important;
+  font-weight: 500;
+}
+
+/* @media all and (max-width: 30em) {
+   .Button1 {
+    display: block;
+    margin: 0.4em auto;
+  }
+} */
+span {
+  text-align: center !important;
+}
+p {
+  text-align: center;
+  font-weight: 550;
+  font-size: 4vh;
+  position: relative;
+  top: 6vh;
+}
+.QrLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 14vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .Button1 {
+    width: 95px;
+    display: inline-block;
+    padding: 0.35px 0.35px;
+    border: 0.1em solid rgb(18, 58, 119);
+    background-color: rgb(18, 58, 119);
+    /* margin: 0.9em 0.3em 0; */
+    border-radius: 0.42em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: 15px;
+  }
+  .QrPage {
+    /* margin-left: 20vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+  }
+  img {
+    height: 260px;
+    width: auto;
+    margin-left: 48px;
+    position: relative;
+    top: 42px;
+  }
+  .QrLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    top: 5vh;
+    margin-left: 59px;
+  }
+  p {
+    text-align: center;
+    font-weight: 550;
+    font-size: 20px;
+    position: fixed;
+    top: 13vh;
+    margin-left: 43px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .Button1 {
+    width: 30vh;
+    display: inline-block;
+    padding: 0.35vh 1.2vh;
+    border: 0.1em solid rgb(18, 58, 119);
+    background-color: rgb(18, 58, 119);
+    margin: 0 0.3em 2.3em 0;
+    border-radius: 0.42em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+  }
+}
