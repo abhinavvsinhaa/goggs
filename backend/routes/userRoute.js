@@ -5,7 +5,6 @@ const userController = require('../controllers/userController.js');
 const router = express.Router();
 
 //User Router
-router.post('/login', authController.login);
 router.get('/verifyGeneralAndHostel', userController.verifyGeneralAndHostel)
 router.get('/verifyMess', userController.verifyMess)
 

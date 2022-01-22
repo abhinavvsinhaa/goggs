@@ -1,12 +1,16 @@
-const MongoClient = require('mongodb').MongoClient;
+const dotenv = require('dotenv');
+dotenv.config();
 
-let url = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false"
+const MongoClient = require('mongodb').MongoClient;
+let url = process.env.DB_URI;
+let dbname = process.env.DB_NAME
+let collection = process.env.DB_COLLECTION
 
 const generalJWT = (req, res, next) => {
     MongoClient.connect(url, (err, db) => {
         if (err) throw err;
-        let DB = db.db('Goggs');
-        DB.collection("Users").find({enroll: req.body.enroll}).toArray((err, result) => {
+        let DB = db.db(dbname);
+        DB.collection(collection).find({enroll: req.body.enroll}).toArray((err, result) => {
             if (err) throw err;
             res.json(result[0].generalJWT);
         })
@@ -16,8 +20,8 @@ const generalJWT = (req, res, next) => {
 const hostelJWT = (req, res, next) => {
     MongoClient.connect(url, (err, db) => {
         if (err) throw err;
-        let DB = db.db('Goggs');
-        DB.collection("Users").find({enroll: req.body.enroll}).toArray((err, result) => {
+        let DB = db.db(dbname);
+        DB.collection(collection).find({enroll: req.body.enroll}).toArray((err, result) => {
             if (err) throw err;
             res.json(result[0].hostel.hostelJWT)
         })
@@ -27,8 +31,8 @@ const hostelJWT = (req, res, next) => {
 const messJWT = (req, res, next) => {
     MongoClient.connect(url, (err, db) => {
         if (err) throw err;
-        let DB = db.db('Goggs');
-        DB.collection("Users").find({enroll: req.body.enroll}).toArray((err, result) => {
+        let DB = db.db(dbname);
+        DB.collection(collection).find({enroll: req.body.enroll}).toArray((err, result) => {
             if (err) throw err;
             res.json(result[0].hostel.mess.messJWT)
         })

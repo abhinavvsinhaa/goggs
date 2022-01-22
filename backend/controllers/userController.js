@@ -4,7 +4,9 @@ dotenv.config();
 
 const MongoClient = require('mongodb').MongoClient;
 
-let url = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false"
+let url = process.env.DB_URI;
+let dbname = process.env.DB_NAME
+let collection = process.env.DB_COLLECTION
 
 const verifyGeneralAndHostel = (req, res, next) => {
     const token = req.body.JWT;
@@ -22,8 +24,8 @@ const verifyGeneralAndHostel = (req, res, next) => {
     } else {
         MongoClient.connect(url, (err, db) => {
             if (err) throw err;
-            let DB = db.db('Goggs');
-            DB.collection("Users").find({enroll: enroll}).toArray((err, result) => {
+            let DB = db.db(dbname);
+            DB.collection(collection).find({enroll: enroll}).toArray((err, result) => {
                 if (err) throw err;
                 if (result.length === 0) {
                     res.json({
