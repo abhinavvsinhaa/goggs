@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "f43e338d-eb36-4056-9f57-21143af9240e",
+		"name": "Goggs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Generate JWTs",
+			"item": [
+				{
+					"name": "Generate JWT Hostel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"enroll\": 9920103085\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/generate/hostel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"generate",
+								"hostel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate JWT General",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"enroll\": 9920103085\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/generate/general",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"generate",
+								"general"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate JWT Mess",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"enroll\": 9920103085\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/generate/general",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"generate",
+								"general"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Verification",
+			"item": [
+				{
+					"name": "Verify JWT General & Hostel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"JWT\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWJoaW5hdiBTaW5oYSIsInR5cGUiOiJnZW5lcmFsIiwiZW5yb2xsIjo5OTIwMTAzMDg1LCJwYXNzd29yZCI6IjYyMjk2NTc1MzI2IiwiaWF0IjoxNTE2MjM5MDIyfQ.I7YSeMWooHjCmsqkwd2GQYrbz47ChXCQyodbCLZmz4E\",\n    \"type\": \"general\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/user/verifyGeneralAndHostel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"verifyGeneralAndHostel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify JWT Mess",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"JWT\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWJoaW5hdiBTaW5oYSIsInR5cGUiOiJnZW5lcmFsIiwiZW5yb2xsIjo5OTIwMTAzMDg1LCJwYXNzd29yZCI6IjYyMjk2NTc1MzI2IiwiaWF0IjoxNTE2MjM5MDIyfQ.I7YSeMWooHjCmsqkwd2GQYrbz47ChXCQyodbCLZmz4E\",\n    \"type\": \"general\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/user/verifyGeneralAndHostel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"verifyGeneralAndHostel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
