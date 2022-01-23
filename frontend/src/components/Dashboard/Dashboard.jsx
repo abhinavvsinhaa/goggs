@@ -2,7 +2,6 @@ import React from "react";
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
 
-
 // Mini variant drawer
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -113,8 +112,8 @@ const RenderIcon = (props) => {
       <Link to="/scanner" style={{color: 'inherit'}}>
         <AdminPanelSettingsIcon />
       </Link>
-    )
-          
+      )
+    
     default:
     break;
   }
