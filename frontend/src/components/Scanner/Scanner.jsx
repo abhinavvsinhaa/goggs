@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import QrReader from 'react-qr-scanner'
+import Dashboard from '../Dashboard/Dashboard';
 
 import "./scanner.css"
 
@@ -101,6 +102,8 @@ const Scanner = () => {
     }
 
     return (
+    <>
+    <Dashboard/>
     <div className='scanner-container'>
         <div className="col1">     
             <div className='qr-scanner'>
@@ -159,6 +162,7 @@ const Scanner = () => {
 
         
     </div>
+    </>
     );
 };
 

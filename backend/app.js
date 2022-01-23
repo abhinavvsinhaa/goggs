@@ -8,9 +8,10 @@ const hpp = require('hpp');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
-//Exporting Routers
+//Importing Routers
 const userRouter = require('./routes/userRoute');
 const generateRouter = require('./routes/generateRouter')
+const loginRouter = require('./routes/loginRouter');
 
 const app = express();
 
@@ -45,6 +46,7 @@ app.use(hpp({ whitelist: [] }));
 app.use(express.json({ limit: '500kb' }));
 
 app.use('/api/v1/user', userRouter);
+app.use('/api/v1/login', loginRouter);
 app.use('/api/v1/generate', generateRouter);
 
 app.all('*', (req, res, next) => {

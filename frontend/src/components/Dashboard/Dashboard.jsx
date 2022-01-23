@@ -1,5 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
+import { Link } from "react-router-dom";
 
 
 // Mini variant drawer
@@ -20,10 +21,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ApartmentIcon from '@mui/icons-material/Apartment';
-import RestaurantIcon from '@mui/icons-material/Restaurant';
-import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 import QrCodeIcon from '@mui/icons-material/QrCode'
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 const drawerWidth = 240;
 
@@ -96,10 +95,25 @@ const RenderIcon = (props) => {
   const { index } = props;
   switch (index) {
     case 0:
-      return <AccountCircleIcon />
+      return (
+      <Link to="/account" style={{color: 'inherit'}}>
+        <AccountCircleIcon />
+      </Link>
+    )
     
     case 1:
-      return <QrCodeIcon />
+      return (
+      <Link to="/qr" style={{color: 'inherit'}}>
+        <QrCodeIcon />
+      </Link>
+    )
+
+    case 2:
+      return (
+      <Link to="/scanner" style={{color: 'inherit'}}>
+        <AdminPanelSettingsIcon />
+      </Link>
+    )
           
     default:
     break;
@@ -148,7 +162,7 @@ export default function Dashboard() {
           </DrawerHeader>
           <Divider />
           <List>
-            {['Account', 'QR Code'].map((text, index) => (
+            {['Account', 'Generate', 'Admin'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>
                   <RenderIcon index={index}/>

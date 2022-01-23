@@ -12,22 +12,16 @@
   background-size: cover;
   height: 100vh;
 }
-.RadioBtn{
+
+.Student{
   display: flex ;
-  align-items: flex-start !important;
-  flex-direction: row;
-  justify-content: space-evenly !important;
-  position: relative;
-  top: -45vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .loginAccount {
   background-color: rgb(245, 245, 245);
   height: 100vh;
-}
-
-form button{
-  
 }
 
 .login-box {
@@ -41,12 +35,12 @@ form button{
   top: -10vh;
 }
 
-h4{
+h4 {
   display: flex;
   align-items: center !important;
 }
 
-form{
+form {
   display: flex;
   flex-direction:column;
   align-items: center;
@@ -57,12 +51,4 @@ input{
   background-color: whitesmoke;
   border: 1px solid #8E8E8E;
   font-weight: 400;
-}
-
-button {
-  width: 10% ;
-  padding: 6px !important;
-  margin: 9px !important;
-  position: fixed;
-  top: 60vh;
 }

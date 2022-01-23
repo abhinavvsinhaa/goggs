@@ -7,6 +7,7 @@ import Contacts from "./Contacts/Contacts"
 import Scanner from "./components/Scanner/Scanner";
 import QrViewer from "./components/QrViewer/QrViewer";
 import Verified from "./components/Verified/Verified";
+
 import {
   BrowserRouter,
   Routes,
@@ -26,12 +27,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/login" element={<Login />}/>
+        <Route exact path="/" element={<Login />}/>
         <Route path="/scanner" element={<Scanner />} />
+        <Route path="/qr" element={<QrViewer eroll="9920103085"/>} /> 
+        <Route path="/account" element={<Account />} />
       </Routes>
     </BrowserRouter>
   );
 }
-
 export default App;
 

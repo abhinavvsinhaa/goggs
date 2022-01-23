@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import QRCode from 'react-qr-code';
 import './qrviewer.css'
+import Dashboard from '../Dashboard/Dashboard';
 
 
 const QrViewer = ({ eroll }) => {
 
     const [token, setToken] = useState("");
-    const [type, setType] = useState("GENERAL");
+    const [type, setType] = useState("general");
 
     const fetchUsers = async () => {
-        const apiUrl = `http://localhost:8000/api/v1/generate/${type.toLowerCase()}`
-        const res = await fetch(apiUrl, {
+        const apiUrl = `http://localhost:8000/api/v1/generate/${type}`
+        fetch(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -18,10 +19,14 @@ const QrViewer = ({ eroll }) => {
             body: JSON.stringify({
                 "enroll": eroll
             })
-        });
-        console.log(res);
-        setToken(res.data);
+        })
+        .then(res => res.json())
+        .then(result => {
+            setToken(result)
+        })
+        .catch(console.log)
     }
+
     useEffect(() => {
         fetchUsers();
     }, []);
@@ -31,16 +36,22 @@ const QrViewer = ({ eroll }) => {
         fetchUsers();
     }
 
-    return <div className='qr-view'>
-        <select class="form-control" value={type} onChange={handleChange}>
-            <option>GENERAL</option>
-            <option>HOSTEL</option>
-            <option>PARKING</option>
-        </select>
-        <br/>
-        <QRCode value={token} />
-        <h1>{type} QR</h1>
-    </div>;
+    return (
+    <>
+        <Dashboard />
+        <div className='qr-view'>
+            <select class="form-control" value={type} onChange={handleChange}>
+                <option value="general">General</option>
+                <option value="hostel">Hostel</option>
+                <option value="mess">Mess</option>
+            </select>
+            <br/>
+            <QRCode className="svgDownlode" value={token} />
+            <br />
+            <h3 style={{textTransform: 'uppercase'}}>{type} QR</h3>
+        </div>
+    </>
+    );
 };
 
 export default QrViewer;

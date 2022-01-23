@@ -56,7 +56,7 @@
         "password": "62296575326",
         "image": "https://drive.google.com/file/d/1fdna7jqoJh6efxU7ha0QOXER6wyA-quC/view?usp=sharing",
         "tuitionFee": true,
-        "generalJWT":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWJoaW5hdiBTaW5oYSIsInR5cGUiOiJnZW5lcmFsIiwiZW5yb2xsIjo5OTIwMTAzMDg1LCJwYXNzd29yZCI6IjYyMjk2NTc1MzI2IiwiaWF0IjoxNTE2MjM5MDIyfQ.I7YSeMWooHjCmsqkwd2GQYrbz47ChXCQyodbCLZmz4E",
+        "generalJWT":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWJoaW5hdiBTaW5oYSIsInR5cGUiOiJnZW5lcmFsIiwiZW5yb2xsIjoiOTkyMDEwMzA4NSIsInBhc3N3b3JkIjoiNjIyOTY1NzUzMjYiLCJpYXQiOjE1MTYyMzkwMjJ9.tFf4Nhsu1dgwtnZV_M8c1vvQh7QilPwDU-D6qJTFJkY",
         "hostel": {
             "hostelFee": true,
             "hostelJWT":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWJoaW5hdiBTaW5oYSIsInR5cGUiOiJob3N0ZWwiLCJlbnJvbGwiOjk5MjAxMDMwODUsInBhc3N3b3JkIjoiNjIyOTY1NzUzMjYiLCJpYXQiOjE1MTYyMzkwMjJ9.n3-VaLE_OOM188omS9Gh5DgeeapdURcQl3pPI5foOYo",
