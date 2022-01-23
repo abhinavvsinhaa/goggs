@@ -5,7 +5,7 @@ const userController = require('../controllers/userController.js');
 const router = express.Router();
 
 //User Router
-router.get('/verifyGeneralAndHostel', userController.verifyGeneralAndHostel)
-router.get('/verifyMess', userController.verifyMess)
+router.post('/verifyGeneralAndHostel', userController.verifyGeneralAndHostel)
+router.post('/verifyMess', userController.verifyMess)
 
 module.exports = router;

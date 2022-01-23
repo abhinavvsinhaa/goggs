@@ -22,7 +22,9 @@ function App() {
   return (
     <div className="App">
       <Dashboard />
-      <Verified verified={data.verified} user={data.user}/>
+      {/* <QrViewer type="mess" eroll="9920103085"/> */}
+      <Scanner />
+      {/* <Verified verified={data.verified} user={data.user}/> */}
     </div>
   );
 }
