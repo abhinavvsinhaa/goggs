@@ -9,10 +9,12 @@ let dbname = process.env.DB_NAME
 let collection = process.env.DB_COLLECTION
 
 const verifyGeneralAndHostel = (req, res, next) => {
+    console.log(req.body)
     const token = req.body.JWT;
     const type = req.body.type
 
     const decode = JWT.decode(token);
+    console.log(decode);
     const enroll = decode.enroll;
 
     if (decode.type !== type) {

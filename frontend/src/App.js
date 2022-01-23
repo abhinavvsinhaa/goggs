@@ -7,8 +7,12 @@ import Contacts from "./Contacts/Contacts"
 import Scanner from "./components/Scanner/Scanner";
 import QrViewer from "./components/QrViewer/QrViewer";
 import Verified from "./components/Verified/Verified";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
-// <QrViewer type="mess" eroll="9920103062"/>
 const data = {
   "verified": 1,
   "user": {
@@ -23,11 +27,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/login" element={<Login />}/>
-        <Route exact path="" element={<Home />} />
         <Route path="/scanner" element={<Scanner />} />
       </Routes>
-    </BrowserRouter>,
-);
+    </BrowserRouter>
+  );
 }
 
 export default App;
+
