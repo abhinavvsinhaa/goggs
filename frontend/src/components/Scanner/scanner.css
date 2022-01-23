@@ -25,3 +25,7 @@
     text-align: center;
     text-transform: uppercase;
 }
+
+.processBtn {
+    margin-top: 80px !important;
+}

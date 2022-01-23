@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import QrReader from 'react-qr-scanner'
-import isJWT from 'is-jwt';
-import Verified from '../Verified/Verified';
 
 import "./scanner.css"
 
@@ -139,8 +137,7 @@ const Scanner = () => {
                     : <></>
                 }
 
-                <br/>
-                <button className='btn btn-success' onClick={handleClick}>Process</button>
+                <button className='btn btn-success processBtn' onClick={handleClick}>Process</button>
             </div>
         </div>
         <div className='col2'>
