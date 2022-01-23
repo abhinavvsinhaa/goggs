@@ -20,11 +20,14 @@ const data = {
 
 function App() {
   return (
-    <div className="App">
-      <Dashboard />
-      <Verified verified={data.verified} user={data.user}/>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/login" element={<Login />}/>
+        <Route exact path="" element={<Home />} />
+        <Route path="/scanner" element={<Scanner />} />
+      </Routes>
+    </BrowserRouter>,
+);
 }
 
 export default App;

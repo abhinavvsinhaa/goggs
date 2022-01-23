@@ -4,8 +4,8 @@ const generateController = require('../controllers/generateController');
 const router = express.Router();
 
 router
-    .get('/general', generateController.generalJWT)
-    .get('/hostel', generateController.hostelJWT)
-    .get('/mess', generateController.messJWT)
+    .post('/general', generateController.generalJWT)
+    .post('/hostel', generateController.hostelJWT)
+    .post('/mess', generateController.messJWT)
 
 module.exports = router;

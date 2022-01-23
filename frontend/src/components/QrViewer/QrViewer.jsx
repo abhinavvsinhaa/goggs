@@ -3,20 +3,43 @@ import QRCode from 'react-qr-code';
 import './qrviewer.css'
 
 
-const QrViewer = ({ type, eroll}) => {
-    
-    const [token, setToken] = useState("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWJoaW5hdiBTaW5oYSIsInR5cGUiOiJob3N0ZWwiLCJlbnJvbGwiOjk5MjAxMDMwODUsInBhc3N3b3JkIjoiNjIyOTY1NzUzMjYiLCJpYXQiOjE1MTYyMzkwMjJ9.n3-VaLE_OOM188omS9Gh5DgeeapdURcQl3pPI5foOYo");
-    
+const QrViewer = ({ eroll }) => {
+
+    const [token, setToken] = useState("");
+    const [type, setType] = useState("GENERAL");
+
+    const fetchUsers = async () => {
+        const apiUrl = `http://localhost:8000/api/v1/generate/${type.toLowerCase()}`
+        const res = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "enroll": eroll
+            })
+        });
+        console.log(res);
+        setToken(res.data);
+    }
     useEffect(() => {
-        const fetchUsers = async () => {
-            const apiUrl = `http://localhost:8000/api/v1/generate/${token}`
-        }
         fetchUsers();
     }, []);
-    
+
+    const handleChange = (event) =>{
+        setType(event.target.value);
+        fetchUsers();
+    }
+
     return <div className='qr-view'>
-        <h1>{type} QR</h1>
+        <select class="form-control" value={type} onChange={handleChange}>
+            <option>GENERAL</option>
+            <option>HOSTEL</option>
+            <option>PARKING</option>
+        </select>
+        <br/>
         <QRCode value={token} />
+        <h1>{type} QR</h1>
     </div>;
 };
 
