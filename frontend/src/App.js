@@ -8,7 +8,7 @@ import Scanner from "./components/Scanner/Scanner";
 import QrViewer from "./components/QrViewer/QrViewer";
 import Verified from "./components/Verified/Verified";
 
-// <QrViewer type="mess" eroll="9920103062"/>
+<QrViewer type="mess" eroll="9920103062"/>
 const data = {
   "verified": 1,
   "user": {
@@ -21,10 +21,12 @@ const data = {
 function App() {
   return (
     <div className="App">
-      <Dashboard />
-      <Verified verified={data.verified} user={data.user}/>
+      {/* <Dashboard /> */}
+          {/* <Verified verified={data.verified} user={data.user}/> */}
+          <Login />
     </div>
   );
 }
 
 export default App;
+
